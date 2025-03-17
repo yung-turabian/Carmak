@@ -1,14 +1,17 @@
-open import WebGL;
+open import Carmak;
 
 fun mainPage(_) {
 
   # need to spawn a client for alien calls
   var _ = spawnClient {
-		Gl.createContext();
+		createContext("2d");
 
-		Gl.clearColor(1.0, 0.0, 0.0, 1.0);
+		fill(255, 0, 0);
 
-		Gl.clear(Gl.color_buffer_bit())
+		rect(50, 10, 50, 50)
+
+		#Gl.clearColor(1.0, 0.0, 0.0, 1.0);
+		#Gl.clear(Gl.color_buffer_bit())
   };
 
   #Mvu.run("placeholder", defaultGame, view,
@@ -17,10 +20,10 @@ fun mainPage(_) {
   page
   <html>
     <head>
-      <title>WebGL Demo</title>
+      <title>Carmak Demo</title>
     </head>
     <body>
-				<canvas id="gl-canvas" width="640" height="480"></canvas>
+				{render(640, 480)}
     </body>
   </html>
 }
