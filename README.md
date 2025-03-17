@@ -1,4 +1,4 @@
-# Links Render Package
+# Carmak, a Links Rendering Package
 
 # About
 
